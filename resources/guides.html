@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Guides</title>
+    <style>
+        :root {
+            --primary: #cecece;
+            --secondary: #c4c4c4;
+            --accent: #666666;
+            --background: #181a1b;
+            --text: #d3d3d3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        html, body {
+            height: 100%;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+        
+        header {
+            background: #232323;
+            color: white;
+            padding: 1rem 0;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: var(--accent);
+        }
+        
+        .content {
+            padding: 4rem 0;
+            text-align: left;
+        }
+        
+        footer {
+            background: #232323;
+            color: white;
+            padding: 2rem 0;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="container">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/assets/logos/sf-logo-long-web.webp" alt="SilverFlag Logo" width="230" height="50">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="/index.html#features">Features</a>
+                    <a href="/about/index.html">About</a>
+                    <a href="/resources/index.html">Resources</a>
+                    <a href="/contact/index.html">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container content">
+            <section>
+                <h1>Resources | Guides</h1>
+                <p>There is not much here currently, though it is planned for this to be a place where you are able to</p>
+                <p>get guides, tips & tricks, or other information about ways that you could improve your online privacy.</p>
+                <br>
+                <p>If you would like to help write content, please send an email to content@silverflag.net. It would be much appreciated.</p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="/about/mission.html">Our Mission</a></li>
+                            <li><a href="/about/standards.html">Standards</a></li>
+                            <li><a href="/about/team.html">Team</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="/resources/docs.html">Documentation</a></li>
+                            <li><a href="/resources/guides.html">Guides</a></li>
+                            <li><a href="/resources/articles.html">Articles</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="/contact/support.html">Support</a></li>
+                            <li><a href="/contact/contribute.html">Contribute</a></li>
+                            <li><a href="/contact/feedback.html">Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
