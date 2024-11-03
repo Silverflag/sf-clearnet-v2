@@ -26,11 +26,28 @@
             color: var(--text);
             line-height: 1.6;
         }
+
+        .button {
+            display: inline-block;
+            width: 250px;
+            padding: 10px 0;
+            margin: 5px 0;
+            color: white;
+            background-color: #2a2d2f;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #3c3f41;
+        }
         
         .wrapper {
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh; /* Minimum height for the wrapper */
         }
         
         .container {
@@ -81,8 +98,9 @@
         }
         
         .content {
+            flex: 1; /* Allows the content area to grow */
             padding: 4rem 0;
-            text-align: left;
+            text-align: center; /* Center text */
         }
         
         footer {
@@ -135,24 +153,14 @@
             </nav>
         </header>
 
-        <main class="container content">
-            <section>
-                <h1>Index of Items</h1>
-                <p>What are you looking for?</p>
-                <br>
-                <a href="item1.html">
-                    <p>Item #1</p>
-                </a>
-                <br>
-                <a href="item2.html">
-                    <p>Item #2</p>
-                </a>
-                <br>
-                <a href="item3.html">
-                    <p>Item #3</p>
-                </a>
-                
-            </section>
+        <main class="content">
+            <h1>Index of Items</h1>
+            <p>What are you looking for?</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="item1.html" class="button">Item #1</a>
+                <a href="item2.html" class="button">Item #2</a>
+                <a href="item3.html" class="button">Item #3</a>
+            </div>
         </main>
 
         <footer>
