@@ -26,6 +26,23 @@
             color: var(--text);
             line-height: 1.6;
         }
+
+        .button {
+            display: inline-block;
+            width: 250px;
+            padding: 10px 0;
+            margin: 5px 0;
+            color: white;
+            background-color: #2a2d2f;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #3c3f41;
+        }
         
         .wrapper {
             display: flex;
@@ -81,8 +98,9 @@
         }
         
         .content {
+            flex: 1;
             padding: 4rem 0;
-            text-align: left;
+            text-align: center;
         }
         
         footer {
@@ -135,24 +153,14 @@
             </nav>
         </header>
 
-        <main class="container content">
-            <section>
-                <h1>Index of Contact</h1>
-                <p>What kind of contact are you looking for?</p>
-                <br>
-                <a href="/contact/support.html">
-                    <p>Support</p>
-                </a>
-                <br>
-                <a href="/contact/contribute.html">
-                    <p>Contribute</p>
-                </a>
-                <br>
-                <a href="/contact/feedback.html">
-                    <p>Feedback</p>
-                </a>
-                
-            </section>
+        <main class="content">
+            <h1>Index of Contact</h1>
+            <p>What are you looking for?</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="/contact/support.html" class="button">Support</a>
+                <a href="/contact/contribute.html" class="button">Contribute</a>
+                <a href="/contact/feedback.html" class="button">Feedback</a>
+            </div>
         </main>
 
         <footer>
