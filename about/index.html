@@ -141,15 +141,41 @@
             <nav class="container">
                 <div class="logo">
                     <a href="/">
-                        <img src="/assets/logos/sf-logo-long-web.webp" alt="SilverFlag Logo" width="230" height="50">
+                        <img id="logo" alt="SilverFlag Logo" width="230" height="50">
                     </a>
                 </div>
+                
+                <script>
+                    window.onload = function() {
+                        const logo = document.getElementById("logo");
+                        const isEasterEgg = Math.random() < 0.01;
+                
+                        logo.src = isEasterEgg 
+                            ? "/assets/logos/sf-logo-long-easteregg-plain.webp" 
+                            : "/assets/logos/sf-logo-long-web.webp";
+                
+                        if (isEasterEgg) {
+                            logo.title = "There is a one out of one hundred chance you would get this";
+                        }
+                    };
+                </script>   
                 <div class="nav-links">
-                    <a href="/index.html#features">Features</a>
-                    <a href="/about/index.html">About</a>
-                    <a href="/resources/index.html">Resources</a>
-                    <a href="/contact/index.html">Contact</a>
-                </div>
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/features.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/index.html#features">Features</a>
+                    </div>       
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/about.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/about/index.html">Features</a>
+                    </div> 
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/resources.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/resources/index.html">Features</a>
+                    </div> 
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/contact.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/contact/index.html">Features</a>
+                    </div> 
             </nav>
         </header>
 
