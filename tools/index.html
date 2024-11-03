@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Team</title>
+    <title>Tools | Index</title>
     <style>
         :root {
             --primary: #cecece;
@@ -25,6 +25,23 @@
             background: var(--background);
             color: var(--text);
             line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            width: 250px;
+            padding: 10px 0;
+            margin: 5px 0;
+            color: white;
+            background-color: #2a2d2f;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #3c3f41;
         }
         
         .wrapper {
@@ -81,8 +98,9 @@
         }
         
         .content {
+            flex: 1;
             padding: 4rem 0;
-            text-align: left;
+            text-align: center;
         }
         
         footer {
@@ -126,7 +144,6 @@
                         <img id="logo" alt="SilverFlag Logo" width="230" height="50">
                     </a>
                 </div>
-                
                 <script>
                     window.onload = function() {
                         const logo = document.getElementById("logo");
@@ -141,51 +158,39 @@
                         }
                     };
                 </script>   
-            <div class="nav-links">
-                <div style="display: flex; align-items: center;">
-                    <img src="/assets/icons/features.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
-                    <a href="/index.html#features">Features</a>
-                </div>       
-                <div style="display: flex; align-items: center;">
-                    <img src="/assets/icons/about.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
-                    <a href="/about/index.html">About</a>
-                </div> 
-                <div style="display: flex; align-items: center;">
-                    <img src="/assets/icons/resources.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
-                    <a href="/resources/index.html">Resources</a>
-                </div> 
-                <div style="display: flex; align-items: center;">
-                    <img src="/assets/icons/contact.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
-                    <a href="/contact/index.html">Contact</a>
-                </div> 
-                <div style="display: flex; align-items: center;">
-                    <img src="/assets/icons/tools.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
-                    <a href="/tools/index.html">Tools</a>
-                </div> 
-            </div>
+                <div class="nav-links">
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/features.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/index.html#features">Features</a>
+                    </div>       
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/about.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/about/index.html">About</a>
+                    </div> 
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/resources.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/resources/index.html">Resources</a>
+                    </div> 
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/contact.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/contact/index.html">Contact</a>
+                    </div> 
+                    <div style="display: flex; align-items: center;">
+                        <img src="/assets/icons/tools.png" alt="Features" width="25" height="25" style="margin-right: 4px;">
+                        <a href="/tools/index.html">Tools</a>
+                    </div> 
+                </div>  
             </nav>
         </header>
-
-        <main class="container content">
-            <section>
-                <h1>About | Team</h1>
-                <p>Our team includes</p>
-                <br>
-                <p>    -<strong>Dread:</strong> Head dev, sysadmin, main sponsor, webmaster, Co-Owner</p>
-                <p>    -<strong>TheRPro:</strong> Dev, backup sysadmin, Co-Owner</p>
-                <p>    -<strong>Efenow:</strong> Dev</p>
-                <p>    -<strong>oddL0G:</strong> Graphic Design, UI/UX Designer</p>
-                <br>
-                <br>
-                <br>
-                <p>Websites of team members:</p>
-                <p>    -<strong>Efenow:</strong></p>
-                <a href="https://efenow.xyz/index.html">
-                    efenow.xyz
-                </a>
-            </section>
+        <main class="content">
+            <h1>Index of Tools</h1>
+            <p>What are you looking for?</p>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <a href="dns_resolver.html" class="button">DNS Resolver</a>
+                <a href="user_agent_check.html" class="button">User Agent Reader</a>
+                <a href="self_ip_check.html" class="button">IP Checker</a>
+            </div>
         </main>
-
         <footer>
             <div class="container">
                 <div class="footer-content">
@@ -195,6 +200,7 @@
                             <li><a href="/about/mission.html">Our Mission</a></li>
                             <li><a href="/about/standards.html">Standards</a></li>
                             <li><a href="/about/team.html">Team</a></li>
+
                         </ul>
                     </div>
                     <div class="footer-section">

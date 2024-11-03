@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Team</title>
+    <title>Tools | UA Checker</title>
     <style>
         :root {
             --primary: #cecece;
@@ -167,23 +167,131 @@
         </header>
 
         <main class="container content">
-            <section>
-                <h1>About | Team</h1>
-                <p>Our team includes</p>
-                <br>
-                <p>    -<strong>Dread:</strong> Head dev, sysadmin, main sponsor, webmaster, Co-Owner</p>
-                <p>    -<strong>TheRPro:</strong> Dev, backup sysadmin, Co-Owner</p>
-                <p>    -<strong>Efenow:</strong> Dev</p>
-                <p>    -<strong>oddL0G:</strong> Graphic Design, UI/UX Designer</p>
-                <br>
-                <br>
-                <br>
-                <p>Websites of team members:</p>
-                <p>    -<strong>Efenow:</strong></p>
-                <a href="https://efenow.xyz/index.html">
-                    efenow.xyz
-                </a>
-            </section>
+            <!-- Tool logic start -->
+            <div class="tool-element">
+                <h2>User Agent Information</h2>
+                <input type="button" value="Get User Agent" onclick="getUserAgent()">
+                <div id="info" class="card">
+                    <h3>Details</h3>
+                    <table>
+                        <tr>
+                            <th>Property</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>User Agent</td>
+                            <td id="userAgent"></td>
+                        </tr>
+                        <tr>
+                            <td>Browser</td>
+                            <td id="browser"></td>
+                        </tr>
+                        <tr>
+                            <td>Operating System</td>
+                            <td id="os"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <script>
+                function getUserAgent() {
+                    const userAgent = navigator.userAgent;
+                    document.getElementById('userAgent').textContent = userAgent;
+
+                    const browserInfo = userAgent.match(/(Firefox|Chrome|Safari|MSIE|Trident|Edge)[\/\s]([0-9.]+)/);
+                    const osInfo = userAgent.match(/(Windows NT|Macintosh|Linux|Android|iOS)[\s]?[0-9._]*/);
+
+                    if (browserInfo) {
+                        document.getElementById('browser').textContent = `${browserInfo[1]} ${browserInfo[2]}`;
+                    } else {
+                        document.getElementById('browser').textContent = 'Unknown';
+                    }
+
+                    if (osInfo) {
+                        document.getElementById('os').textContent = osInfo[1];
+                    } else {
+                        document.getElementById('os').textContent = 'Unknown';
+                    }
+                }
+            </script>
+            <!-- Tool logic end -->
+            <!--Tool Styling start-->
+            <style>
+            .tool-element {
+                background-color: #2e2e2e;
+                border-radius: 12px;
+                padding: 30px;
+                width: 800px;
+                margin: 0 auto;
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+                color: #d3d3d3;
+            }
+
+            .tool-element h2 {
+                color: #f0f0f0;
+            }
+
+            .tool-element input[type="text"] {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 15px;
+                border: 1px solid #a6a6a6;
+                border-radius: 8px;
+                background-color: #1a1a1a;
+                color: #d3d3d3;
+            }
+
+            .tool-element input[type="button"] {
+                width: 100%;
+                padding: 12px;
+                background-color: #4a4a4a;
+                color: #d3d3d3;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+                margin-top: 10px;
+            }
+
+            .tool-element input[type="button"]:hover {
+                background-color: #5a5a5a;
+            }
+
+            #info {
+                margin-top: 20px;
+            }
+
+            .card {
+                background-color: #444;
+                border-radius: 8px;
+                padding: 15px;
+                color: #d3d3d3;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #666;
+            }
+
+            td {
+                background-color: #555;
+            }
+
+            .service-info {
+                margin: 10px 0;
+            }
+        </style>
+        <!--Tool Styling end-->
         </main>
 
         <footer>
