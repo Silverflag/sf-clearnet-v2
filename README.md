@@ -1,3 +1,7 @@
+#⚠️ This project is no longer maintained
+--
+Silverflag Clearnet Version 2 has replaced by [Clearnet Version 4](https://github.com/Silverflag/sf-clearnet-v4/). Clearnet Version 2 is not used anymore. Please refer to [v4](https://github.com/Silverflag/sf-clearnet-v4/).
+
 This is a basic website that I am working on at the domain "silverflag.net"
 
 The idea is for a free information respository using a custom backend currently in development to pull and parse data from our growing list of RSS streams from various websites.
